@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply dark:bg-zinc-900
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+::selection {
+    background-color: #5252524b;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 2px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #8a8a8a 0%, #2c2c2c 100%);
+  }
+  
