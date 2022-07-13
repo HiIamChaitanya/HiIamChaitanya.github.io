@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         price_data: {
             currency: "usd",
             product_data: {
-                name: `Sponsor Paul`,
+                name: `Chaitanya`,
             },
             unit_amount: amount * 100,
         },

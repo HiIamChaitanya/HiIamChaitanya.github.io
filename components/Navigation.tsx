@@ -18,21 +18,21 @@ const Navigation = () => {
                 <div className="items-end flex space-x-5">
                     <Link href="/">
                         <a
-                            className={pathname === "/" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500  dark:text-white" : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
+                            className={pathname === "/" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500  " : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
                         >
                             About
                         </a>
                     </Link>
                     <Link href={"/blog"}>
                         <a
-                            className={pathname === "/blog" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500  dark:text-white" : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
+                            className={pathname === "/blog" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500  " : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
                         >
                             Blog
                         </a>
                     </Link>
                     <Link href={"/supportme"}>
                         <a
-                            className={pathname === "/supportme" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500  dark:text-white" : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
+                            className={pathname === "/supportme" ? "font-medium tracking-wider transition-colors dark:text-gray-500 text-zinc-500 hover:text-gray-500 " : "font-medium tracking-wider transition-colors text-gray-900 dark:hover:text-gray-400 hover:text-gray-400  dark:text-white"}
                         >
                             Support Me
                         </a>

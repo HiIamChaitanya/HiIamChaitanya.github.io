@@ -11,7 +11,7 @@ export default function MetaContainer({children, ...customMeta}) {
     const meta = {
         title: "HiIamChaitanya",
         description: ``,
-        image: "../public/1604.png",
+        image: "../public/profile.png",
         type: "website",
         date: new Date().toDateString(),
         ...customMeta,

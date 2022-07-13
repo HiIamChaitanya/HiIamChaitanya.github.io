@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="flex flex-col justify-between lg:flex-row items-center">
                     <p>@HiiamChaitanya</p>
                     <div
-                            className="flex md:flex lg:flex sm:flex space-x-4 font-medium text-gray-800 sm:block dark:text-white">
+                            className="flex md:flex space-x-4 font-medium text-gray-800 sm:block dark:text-white">
                             <a className="transition-colors hover:text-gray-500" target="_blank" rel="noreferrer"
                                href="https://twitter.com/HiiamChaitanya">
                                 <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
