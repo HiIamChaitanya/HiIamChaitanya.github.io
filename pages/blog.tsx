@@ -1,25 +1,3 @@
-// import Parser from 'rss-parser'
-// import { useEffect, useState } from 'react'
-// import SkeletonBlogEntry from '@components/SkeletonBlogEntry'
-
-// const Blog = () => {
-//   return (
-//     <div className="blog">
-//       <h1 className="p-12 text-center text-4xl font-extrabold text-gray-800 dark:text-white">
-//         Blog Posts 📎
-//       </h1>
-
-//       <p className="p-7 text-center text-sm font-light text-gray-800 dark:text-white">
-//         🔍 No blogs yet. Check back later.
-//       </p>
-//     </div>
-//   )
-// }
-
-//export default Blog
-
-
-
 import imageUrlBuilder from '@sanity/image-url'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -31,7 +9,7 @@ export default function Home({ posts }) {
   useEffect(() => {
     if (posts.length) {
       const imgBuilder = imageUrlBuilder({
-        projectId: 'mjoyrhci',
+        projectId: 'nx46hqrh',
         dataset: 'production',
       })
 
@@ -50,22 +28,23 @@ export default function Home({ posts }) {
 
   return (
     <div>
+      <div className="grid p-4">
+        <h1 className="p-12 text-center text-4xl font-extrabold text-gray-800 dark:text-white">
+      Blog Posts 📎
+        </h1>
 
-      <div className="p-12 text-center text-4xl font-extrabold text-gray-800 dark:text-white">
-        <h1>Blog Posts 📎</h1>
 
-        <h3>Recent Posts:</h3>
-
-        <div className="">
+        <div className="p-3">
           {mappedPosts.length ? (
             mappedPosts.map((p, index) => (
               <div
                 onClick={() => router.push(`/post/${p.slug.current}`)}
                 key={index}
-                className="flex flex-col p-4 cursor-pointer"
+                className="max-w-2xl space-x-8 mx-auto overflow-hidden rounded-lg shadow-lg cursor-pointer "
               >
-                <h3>{p.title}</h3>
-                <img className="" src={p.mainImage} />
+                <img className="object-cover w-full h-full sborder-4 rounded-lg scale-75 border-gray-800 dark:border-gray-400" src={p.mainImage} />
+                <h3 className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform dark:text-white hover:text-gray-600 hover:underline">{p.title}</h3>
+                
               </div>
             ))
           ) : (
@@ -79,7 +58,7 @@ export default function Home({ posts }) {
 
 export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent('*[ _type == "post" ]')
-  const url = `https://a4apay1i.api.sanity.io/v1/data/query/production?query=${query}`
+  const url = `https://nx46hqrh.api.sanity.io/v1/data/query/production?query=${query}`
   const result = await fetch(url).then((res) => res.json())
 
   if (!result.result || !result.result.length) {
