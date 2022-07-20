@@ -8,7 +8,7 @@ export const Post = ({ title, body, image }) => {
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
-      projectId: 'mjoyrhci',
+      projectId: 'a4apay1i',
       dataset: 'production',
     });
 
@@ -39,7 +39,7 @@ export const getServerSideProps = async pageContext => {
   }
 
   const query = encodeURIComponent(`*[ _type == "post" && slug.current == "${pageSlug}" ]`);
-  const url = `https://mjoyrhci.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = `https://a4apay1i.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then(res => res.json());
   const post = result.result[0];
